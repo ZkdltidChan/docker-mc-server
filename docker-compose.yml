@@ -5,12 +5,23 @@ services:
     image: itzg/minecraft-server
     environment:
       EULA: "true"
+      TYPE: "FABRIC"
+      WORLD: "/worlds/basic/world.zip"
+      MODS: "https://www.dropbox.com/s/6rz6uzgtzo2j18d/architectury-6.2.46-fabric.jar?dl=0,https://www.dropbox.com/s/4xtm9t4uo34k0r7/cloth-config-4.15.82-forge.jar?dl=0,https://www.dropbox.com/s/vh1662mhz2h8esa/diggusmaximus-1.5.8-1.19.jar?dl=0,https://www.dropbox.com/s/8vxlxd9r6qq9n52/fabric-api-0.60.0%2B1.19.2.jar?dl=0,https://www.dropbox.com/s/12ohka8z48w4981/fpsdisplay-1.5.0%2B1.19.jar?dl=0,https://www.dropbox.com/s/jdoo4aeld1m6o0l/iris-mc1.19.2-1.2.8.jar?dl=0,https://www.dropbox.com/s/flrtm47e00ele3k/item-filters-fabric-1902.2.9-build.41.jar?dl=0,https://www.dropbox.com/s/bc7s4hpbbv65yjf/jei-1.19.2-fabric-11.3.0.262.jar?dl=0,https://www.dropbox.com/s/6p3h9unelppv7r2/lithium-fabric-mc1.19.2-0.8.3.jar?dl=0,https://www.dropbox.com/s/ei6hvdu7iq01x07/mcw-bridges-2.0.3fabric-mc1.19.jar?dl=0,https://www.dropbox.com/s/hkgu6ek6up0xs94/mcw-roofs-2.2.0-mc1.19.2-fabric.jar?dl=0,https://www.dropbox.com/s/xfnco4npz79m8m2/mcw-windows-2.0.3bfabric-mc1.19.jar?dl=0,https://www.dropbox.com/s/6yno5lurvcy9iuc/sodium-fabric-mc1.19.2-0.4.4%2Bbuild.18.jar?dl=0,https://www.dropbox.com/s/o45p6j5nog0u1fh/Xaeros_Minimap_22.13.2_Fabric_1.19.1.jar?dl=0"
+      # FORCE_WORLD_COPY: true
+      # ETRA_ARGS='--word-dir ./'
     ports:
       - "25565:25565"
     volumes:
-      - data:/data
+      # - data:/data
+      # attach a directory relative to the directory containing this compose file
+      - ./worlds:/worlds:ro
+      - ./minecraft-data:/data
+
     stdin_open: true
     tty: true
     restart: unless-stopped
 volumes:
   data: {}
+
+  
