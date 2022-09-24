@@ -18,6 +18,7 @@ services:
       - ./worlds:/worlds:ro
       - ./extras:/extras:ro
       - ./minecraft-data:/data
+      - ./mods:/mods
 
     stdin_open: true
     tty: true
