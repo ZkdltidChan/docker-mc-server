@@ -7,7 +7,9 @@ services:
       EULA: "true"
       TYPE: "FABRIC"
       WORLD: "/worlds/basic/world.zip"
-      MODS_FILE: "/extras/mods.txt"
+      OPS: "121533e6-b9d7-4052-b2c3-8792454bc0ca"
+      OP_PERMISSION_LEVEL: 1
+      #  MODS_FILE: "/extras/mods.txt"
       # FORCE_WORLD_COPY: true
       # ETRA_ARGS='--word-dir ./'
     ports:

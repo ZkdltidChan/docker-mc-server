@@ -1,0 +1,14 @@
+[
+  {
+    "uuid": "121533e6-b9d7-4052-b2c3-8792454bc0ca",
+    "name": "zkdltid",
+    "level": 1,
+    "bypassesPlayerLimit": true
+  },
+  {
+    "uuid": "bd346dd5-ac1c-427d-87e8-73bdd4bf3e13",
+    "name": "Player",
+    "level": 1,
+    "bypassesPlayerLimit": false
+  }
+]
